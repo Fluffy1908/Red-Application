@@ -8,7 +8,7 @@ export default function App() {
     const [error, setError] =useState(false)
 
     useEffect(() => {
-        fetch('https://www.reddit.com/r/programming/top.json?limit=10')
+        fetch('https://www.reddit.com/r/GameStop/top.json?query=20')
         .then((response) => response.json())
         .then((jsonData) => setRedditData(jsonData))
         .catch((error) => setError(true))
